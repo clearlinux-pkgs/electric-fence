@@ -1,0 +1,19 @@
+--- electric-fence/Makefile~	2017-01-29 12:19:54.000000000 +0000
++++ electric-fence/Makefile	2018-10-11 19:21:14.689212135 +0000
+@@ -32,14 +32,8 @@
+ 	@ echo
+ 
+ install: libefence.a libefence.3 libefence.so.0.0
+-	$(INSTALL) -m 755 ef.sh $(BIN_INSTALL_DIR)/ef
+-	$(INSTALL) -m 644 libefence.a $(LIB_INSTALL_DIR)
+-	$(INSTALL) -m 755 libefence.so.0.0 $(LIB_INSTALL_DIR)
+-	- rm -f $(LIB_INSTALL_DIR)/libefence.so.0
+-	ln -s libefence.so.0.0 $(LIB_INSTALL_DIR)/libefence.so.0
+-	- rm -f $(LIB_INSTALL_DIR)/libefence.so
+-	ln -s libefence.so.0.0 $(LIB_INSTALL_DIR)/libefence.so
+-	$(INSTALL) -m 644 efence.3 $(MAN_INSTALL_DIR)/libefence.3
++	mkdir -p $(DESTDIR)/usr/lib64
++	$(INSTALL) -m 755 libefence.so.0.0 $(DESTDIR)/usr/lib64
+ 
+ clean:
+ 	- rm -f $(OBJECTS) tstheap.o eftest.o tstheap eftest \
