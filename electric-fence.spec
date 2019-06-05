@@ -4,7 +4,7 @@
 #
 Name     : electric-fence
 Version  : 2.2.5
-Release  : 1
+Release  : 2
 URL      : http://archive.ubuntu.com/ubuntu/pool/universe/e/electric-fence/electric-fence_2.2.5.tar.gz
 Source0  : http://archive.ubuntu.com/ubuntu/pool/universe/e/electric-fence/electric-fence_2.2.5.tar.gz
 Summary  : No detailed summary available
